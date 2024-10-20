@@ -4,7 +4,7 @@ Mazda Connected Service API wrapper based on pymazda and Flask.
 
 # Deployment 
 
-Docker can be used to deploy the project locally, simply do `docker-compose up -d`. 
+Docker can be used to deploy the project locally, simply do `docker-compose build` then `docker-compose up -d`. 
 
 This installs the requirements and launchs the flask server behind a `gunicorn` reverse proxy running on port 5001 in a docker container.
 

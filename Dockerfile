@@ -3,15 +3,21 @@ FROM python:3.8-slim
 
 EXPOSE 5001
 
+RUN apt-get update; \
+apt-get install -y gunicorn; \
+apt-get clean
+
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
 
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
-# Install pip requirements
+# # Install pip requirements
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
+
+RUN pip3 install -i "https://daniel-6abxf50v.pypimirror.stablebuild.com/2023-10-12" pymazda
 
 WORKDIR /app
 COPY . /app
