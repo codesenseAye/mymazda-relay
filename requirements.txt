@@ -1,5 +1,4 @@
 certifi==2024.2.2
-charset-normalizer==3.3.2
 flask[async]==3.0.3
 gunicorn==23.0.0
 idna==3.6
